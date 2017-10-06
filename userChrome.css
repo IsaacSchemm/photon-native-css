@@ -37,7 +37,7 @@
 
 /*/ ----- Enable the rule below for macOS -----
 :root:-moz-lwtheme-darktext tab toolbarbutton {
-	-moz-appearance: none !important;
+	-moz-appearance: button-bevel !important;
 }/**/
 
 :root:-moz-lwtheme-darktext,
