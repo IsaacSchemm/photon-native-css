@@ -1,0 +1,57 @@
+:root:-moz-lwtheme-darktext {
+	--toolbarbutton-icon-fill-opacity: 1.0 !important;
+	--chrome-background-color: ThreeDFace !important;
+	--chrome-secondary-background-color: ThreeDFace !important;
+	--chrome-color: ButtonText !important;
+	--backbutton-background: transparent !important;
+	--backbutton-hover-background: transparent !important;
+	--backbutton-active-background: transparent !important;
+	--backbutton-border-color: transparent !important;
+}
+
+:root:-moz-lwtheme-darktext:not([uidensity="compact"]) #back-button {
+	padding-inline-start: 0 !important;
+}
+
+:root:-moz-lwtheme-darktext:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+	box-shadow: none !important;
+	border-color: transparent !important;
+}
+
+:root:-moz-lwtheme-darktext .close-icon:hover,
+:root:-moz-lwtheme-darktext .close-icon:hover:active {
+	fill-opacity: 0.0 !important;
+}
+
+:root:-moz-lwtheme-darktext #main-menubar {
+	color: ButtonText;
+}
+
+:root:-moz-lwtheme-darktext #main-menubar > menu {
+	-moz-appearance: menuitem !important;
+}
+
+:root:-moz-lwtheme-darktext toolbarbutton {
+	-moz-appearance: toolbarbutton !important;
+}
+
+/*/ ----- Enable the rule below for macOS -----
+:root:-moz-lwtheme-darktext tab toolbarbutton {
+	-moz-appearance: none !important;
+}/**/
+
+:root:-moz-lwtheme-darktext,
+:root:-moz-lwtheme-darktext toolbar:not([brighttext]) {
+	--toolbarbutton-hover-background: transparent !important;
+	--toolbarbutton-active-background: transparent !important;
+}
+
+:root:-moz-lwtheme-darktext #urlbar,
+:root:-moz-lwtheme-darktext .searchbar-textbox {
+	-moz-appearance: textfield !important;
+	box-shadow: none !important;
+}
+
+:root:-moz-lwtheme-darktext .urlbar-history-dropmarker {
+	-moz-appearance: menulist-button !important;
+}
