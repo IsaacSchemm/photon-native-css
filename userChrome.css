@@ -1,4 +1,5 @@
 :root:-moz-lwtheme-darktext {
+     background-color: ThreeDFace !important;
 	--toolbarbutton-icon-fill-opacity: 1.0 !important;
 	--chrome-background-color: ThreeDFace !important;
 	--chrome-secondary-background-color: ThreeDFace !important;
@@ -54,4 +55,8 @@
 
 :root:-moz-lwtheme-darktext .urlbar-history-dropmarker {
 	-moz-appearance: menulist-button !important;
+}
+
+:root:-moz-lwtheme-darktext .toolbarbutton-animatable-box, :root:-moz-lwtheme-darktext .toolbarbutton-1 {
+     fill: ButtonText !important;
 }
