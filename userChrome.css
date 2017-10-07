@@ -1,5 +1,7 @@
+/* Set CSS variables. */
 :root:-moz-lwtheme-darktext {
-     background-color: ThreeDFace !important;
+	background-color: ThreeDFace !important;
+	--tabs-border: ThreeDShadow !important;
 	--toolbarbutton-icon-fill-opacity: 1.0 !important;
 	--chrome-background-color: ThreeDFace !important;
 	--chrome-secondary-background-color: ThreeDFace !important;
@@ -8,10 +10,19 @@
 	--backbutton-hover-background: transparent !important;
 	--backbutton-active-background: transparent !important;
 	--backbutton-border-color: transparent !important;
+	--url-and-searchbar-background-color: Window !important;
+	--url-and-searchbar-color: WindowText !important;
 }
 
+/* Add a border to the toolbox (contains all the toolbars) */
+:root:-moz-lwtheme-darktext #navigator-toolbox {
+	border-bottom: 1px solid ThreeDShadow;
+}
+
+/* Make the back button look like the others */
 :root:-moz-lwtheme-darktext:not([uidensity="compact"]) #back-button {
 	padding-inline-start: 0 !important;
+	border-radius: 0 !important;
 }
 
 :root:-moz-lwtheme-darktext:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
@@ -19,11 +30,13 @@
 	border-color: transparent !important;
 }
 
+/* Tab close button */
 :root:-moz-lwtheme-darktext .close-icon:hover,
 :root:-moz-lwtheme-darktext .close-icon:hover:active {
 	fill-opacity: 0.0 !important;
 }
 
+/* Menu bar */
 :root:-moz-lwtheme-darktext #main-menubar {
 	color: ButtonText;
 }
@@ -32,31 +45,87 @@
 	-moz-appearance: menuitem !important;
 }
 
+/* Use native rendering for toolbar buttons (Windows 7/10) */
 :root:-moz-lwtheme-darktext toolbarbutton {
 	-moz-appearance: toolbarbutton !important;
 }
 
-/*/ ----- Enable the rule below for macOS -----
-:root:-moz-lwtheme-darktext tab toolbarbutton {
+/* Enable the line below for macOS (different button style for the tab close button) */
+/*:root:-moz-lwtheme-darktext tab toolbarbutton {
 	-moz-appearance: button-bevel !important;
-}/**/
+}*/
 
+/* Remove the hover/pressed colors on the toolbar buttons */
 :root:-moz-lwtheme-darktext,
 :root:-moz-lwtheme-darktext toolbar:not([brighttext]) {
 	--toolbarbutton-hover-background: transparent !important;
 	--toolbarbutton-active-background: transparent !important;
 }
 
+/* Set appearance of URL and search boxes */
 :root:-moz-lwtheme-darktext #urlbar,
 :root:-moz-lwtheme-darktext .searchbar-textbox {
 	-moz-appearance: textfield !important;
 	box-shadow: none !important;
+	min-height: 32px !important;
 }
 
+/* Dropdown arrow on the URL bar */
 :root:-moz-lwtheme-darktext .urlbar-history-dropmarker {
 	-moz-appearance: menulist-button !important;
 }
 
-:root:-moz-lwtheme-darktext .toolbarbutton-animatable-box, :root:-moz-lwtheme-darktext .toolbarbutton-1 {
-     fill: ButtonText !important;
+/* Set color of toolbar icons */
+:root:-moz-lwtheme-darktext .toolbarbutton-animatable-box,
+:root:-moz-lwtheme-darktext .toolbarbutton-1 {
+	fill: ButtonText !important;
 }
+
+/* Sidebar header (e.g. History, Bookmarks) */
+:root:-moz-lwtheme-darktext #sidebar-header,
+:root:-moz-lwtheme-darktext #sidebar-search-container {
+	background-color: ThreeDFace;
+	border-bottom: 1px solid ThreeDShadow !important;
+}
+
+/* Hover text color on menu bar */
+:root:-moz-lwtheme-darktext menubar > menu[_moz-menuactive="true"]:-moz-lwtheme:not([disabled="true"]) {
+	color: ButtonText !important;
+}
+
+@media (-moz-windows-classic) {
+	:root:-moz-lwtheme-darktext .tab-close-button,
+	:root:-moz-lwtheme-darktext toolbarbutton {
+		-moz-appearance: none !important;
+		border: 1px solid transparent !important;
+	}
+
+	:root:-moz-lwtheme-darktext .tab-close-button:hover,
+	:root:-moz-lwtheme-darktext toolbarbutton:hover {
+		border-top-color: ThreeDHighlight !important;
+		border-left-color: ThreeDHighlight !important;
+		border-bottom-color: ThreeDShadow !important;
+		border-right-color: ThreeDShadow !important;
+	}
+
+	:root:-moz-lwtheme-darktext .tab-close-button:hover:active,
+	:root:-moz-lwtheme-darktext toolbarbutton:hover:active,
+	:root:-moz-lwtheme-darktext #sidebar-switcher-target.active {
+		border-top-color: ThreeDShadow !important;
+		border-left-color: ThreeDShadow !important;
+		border-bottom-color: ThreeDHighlight !important;
+		border-right-color: ThreeDHighlight !important;
+	}
+
+	:root:-moz-lwtheme-darktext .urlbar-icon {
+		width: 16px !important;
+	}
+
+	:root:-moz-lwtheme-darktext #sidebar-switcher-target:hover,
+	:root:-moz-lwtheme-darktext #sidebar-switcher-target:hover:active,
+	:root:-moz-lwtheme-darktext #sidebar-switcher-target.active {
+		background: transparent !important;
+		border-radius: 0 !important;
+	}
+}
+
