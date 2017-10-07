@@ -12,3 +12,4 @@ Tested on:
 * Windows 7, default theme (looks good)
 * Windows 7, classic theme (looks good; the toolbar buttons are just CSS)
 * macOS High Sierra (the buttons could use some work)
+* Unix+GTK3 (looks good on light and dark themes, might need to customize searchbar height)

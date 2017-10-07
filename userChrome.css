@@ -14,6 +14,14 @@
 	--url-and-searchbar-color: WindowText !important;
 }
 
+/* You might want to apply the rules below for GTK3. */
+:root:-moz-lwtheme-darktext {
+	--toolbarbutton-inner-padding: 0px !important;
+}
+.tab-close-button {
+	margin-top: 3px !important;
+}
+
 /* Add a border to the toolbox (contains all the toolbars) */
 :root:-moz-lwtheme-darktext #navigator-toolbox {
 	border-bottom: 1px solid ThreeDShadow;
@@ -67,7 +75,10 @@
 :root:-moz-lwtheme-darktext .searchbar-textbox {
 	-moz-appearance: textfield !important;
 	box-shadow: none !important;
-	min-height: 32px !important;
+}
+
+:root:-moz-lwtheme-darktext .searchbar-textbox {
+	height: 32px !important;
 }
 
 /* Dropdown arrow on the URL bar */
