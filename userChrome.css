@@ -14,12 +14,8 @@
 	--url-and-searchbar-color: WindowText !important;
 }
 
-/* You might want to apply the rules below for GTK3. */
-:root:-moz-lwtheme-darktext {
-	--toolbarbutton-inner-padding: 0px !important;
-}
-.tab-close-button {
-	margin-top: 3px !important;
+:root:-moz-lwtheme-darktext #customization-lwtheme-menu toolbarbutton {
+	-moz-appearance: none !important;
 }
 
 /* Add a border to the toolbox (contains all the toolbars) */
@@ -53,15 +49,10 @@
 	-moz-appearance: menuitem !important;
 }
 
-/* Use native rendering for toolbar buttons (Windows 7/10) */
+/* Use native rendering for toolbar buttons */
 :root:-moz-lwtheme-darktext toolbarbutton {
 	-moz-appearance: toolbarbutton !important;
 }
-
-/* Enable the line below for macOS (different button style for the tab close button) */
-/*:root:-moz-lwtheme-darktext tab toolbarbutton {
-	-moz-appearance: button-bevel !important;
-}*/
 
 /* Remove the hover/pressed colors on the toolbar buttons */
 :root:-moz-lwtheme-darktext,
@@ -75,10 +66,6 @@
 :root:-moz-lwtheme-darktext .searchbar-textbox {
 	-moz-appearance: textfield !important;
 	box-shadow: none !important;
-}
-
-:root:-moz-lwtheme-darktext .searchbar-textbox {
-	height: 32px !important;
 }
 
 /* Dropdown arrow on the URL bar */
@@ -96,13 +83,62 @@
 :root:-moz-lwtheme-darktext #sidebar-header,
 :root:-moz-lwtheme-darktext #sidebar-search-container {
 	background-color: ThreeDFace;
-	border-bottom: 1px solid ThreeDShadow !important;
 }
 
 /* Hover text color on menu bar */
 :root:-moz-lwtheme-darktext menubar > menu[_moz-menuactive="true"]:-moz-lwtheme:not([disabled="true"]) {
 	color: ButtonText !important;
 }
+
+/* Bookmarks toolbar */
+:root:-moz-lwtheme-darktext toolbarbutton.bookmark-item:not(.subviewbutton) {
+	margin: -2px 2px !important;
+	padding: 4px 2px !important;
+}
+
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
+	padding-left: 2px !important;
+	padding-right: 2px !important;
+}
+
+/* If you use the search bar, you can adjust the height with this rule */
+/*:root:-moz-lwtheme-darktext .searchbar-textbox {
+	height: 32px !important;
+}*/
+
+/* Enable these rules for macOS */
+/*:root:-moz-lwtheme-darktext tab toolbarbutton {
+	-moz-appearance: none !important;
+}
+:root:-moz-lwtheme-darktext .tabs-newtab-button {
+	margin-left: 3px !important;
+}
+:root:-moz-lwtheme-darktext #urlbar,
+:root:-moz-lwtheme-darktext .searchbar-textbox {
+	height: 24px !important;
+}
+:root:-moz-lwtheme-darktext #PanelUI-button {
+	border-inline-start-width: 0 !important;
+}
+:root:-moz-lwtheme-darktext #nav-bar {
+	padding-inline-start: 6px;
+	padding-inline-end: 6px;
+}
+:root:-moz-lwtheme-darktext #stop-reload-button {
+	margin-inline-start: 3px;
+	margin-inline-end: 3px;
+}
+:root:-moz-lwtheme-darktext #PanelUI-button {
+	margin-inline-start: 6px;
+}*/
+
+/* Enable these rules for GTK3 (Unix or Linux) to reduce toolbar button size */
+/*:root:-moz-lwtheme-darktext {
+	--toolbarbutton-inner-padding: 0px !important;
+}
+.tab-close-button {
+	margin-top: 3px !important;
+}*/
 
 @media (-moz-windows-classic) {
 	:root:-moz-lwtheme-darktext .tab-close-button,
