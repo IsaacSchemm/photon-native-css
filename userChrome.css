@@ -92,13 +92,14 @@
 
 /* Bookmarks toolbar */
 :root:-moz-lwtheme-darktext toolbarbutton.bookmark-item:not(.subviewbutton) {
-	margin: -2px 2px !important;
+	margin: 0px 2px !important;
 	padding: 4px 2px !important;
 }
 
-#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
+:root:-moz-lwtheme-darktext #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
 	padding-left: 2px !important;
 	padding-right: 2px !important;
+	padding-bottom: 0px !important;
 }
 
 /* If you use the search bar, you can adjust the height with this rule */
