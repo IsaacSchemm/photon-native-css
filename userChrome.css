@@ -35,8 +35,8 @@
 }
 
 /* Tab close button */
-:root:-moz-lwtheme-darktext .close-icon:hover,
-:root:-moz-lwtheme-darktext .close-icon:hover:active {
+:root:-moz-lwtheme-darktext toolbarbutton.close-icon:hover,
+:root:-moz-lwtheme-darktext toolbarbutton.close-icon:hover:active {
 	fill-opacity: 0.0 !important;
 }
 
