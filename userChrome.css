@@ -102,6 +102,13 @@
 	padding-bottom: 0px !important;
 }
 
+/* Inactive tabs */
+@media (-moz-os-version: windows-win7), (-moz-os-version: windows-win8) {
+    :root:-moz-lwtheme-darktext .tabbrowser-tab {
+        background-color: transparent !important;
+    }
+}
+
 /* If you use the search bar, you can adjust the height with this rule */
 /*:root:-moz-lwtheme-darktext .searchbar-textbox {
 	height: 32px !important;
