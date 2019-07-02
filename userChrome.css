@@ -68,6 +68,12 @@
 	box-shadow: none !important;
 }
 
+#searchbar {
+	border-color: transparent !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+
 /* Dropdown arrow on the URL bar */
 :root:-moz-lwtheme-darktext .urlbar-history-dropmarker {
 	-moz-appearance: menulist-button !important;
