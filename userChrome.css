@@ -74,6 +74,14 @@
 	box-shadow: none !important;
 }
 
+.searchbar-search-button {
+	-moz-appearance: menulist;
+}
+
+.searchbar-search-icon-overlay {
+	display: none;
+}
+
 /* Dropdown arrow on the URL bar */
 :root:-moz-lwtheme-darktext .urlbar-history-dropmarker {
 	-moz-appearance: menulist-button !important;
