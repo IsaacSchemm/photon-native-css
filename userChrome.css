@@ -68,17 +68,17 @@
 	box-shadow: none !important;
 }
 
-#searchbar {
+:root:-moz-lwtheme-darktext #searchbar {
 	border-color: transparent !important;
 	background-color: transparent !important;
 	box-shadow: none !important;
 }
 
-.searchbar-search-button {
+:root:-moz-lwtheme-darktext .searchbar-search-button {
 	-moz-appearance: menulist;
 }
 
-.searchbar-search-icon-overlay {
+:root:-moz-lwtheme-darktext .searchbar-search-icon-overlay {
 	display: none;
 }
 
