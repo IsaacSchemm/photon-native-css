@@ -68,6 +68,12 @@
 	box-shadow: none !important;
 }
 
+:root:-moz-lwtheme-darktext  input.searchbar-textbox {
+	background-color: white !important;
+	border: 1px solid ThreeDShadow !important;
+	padding-left: 4px !important;
+}
+
 :root:-moz-lwtheme-darktext #searchbar {
 	border-color: transparent !important;
 	background-color: transparent !important;
