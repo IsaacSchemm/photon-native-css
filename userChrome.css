@@ -129,6 +129,12 @@
     }
 }
 
+/* New address bar */
+#urlbar.megabar:not([focused="true"]):-moz-lwtheme > #urlbar-background,
+#urlbar.megabar:not([focused="true"]):-moz-lwtheme:hover > #urlbar-background {
+	border-color: hsla(240,5%,5%,.25) !important;
+}
+
 /* If you use the search bar, you can adjust the height with this rule */
 /*:root:-moz-lwtheme-darktext .searchbar-textbox {
 	height: 32px !important;
