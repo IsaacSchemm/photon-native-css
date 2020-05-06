@@ -131,7 +131,9 @@
 
 /* New address bar */
 #urlbar.megabar:not([focused="true"]):-moz-lwtheme > #urlbar-background,
-#urlbar.megabar:not([focused="true"]):-moz-lwtheme:hover > #urlbar-background {
+#urlbar.megabar:not([focused="true"]):-moz-lwtheme:hover > #urlbar-background,
+#urlbar:not([focused="true"]):-moz-lwtheme > #urlbar-background,
+#navigator-toolbox #searchbar:not(:focus-within):-moz-lwtheme {
 	border-color: hsla(240,5%,5%,.25) !important;
 }
 
