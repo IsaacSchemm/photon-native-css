@@ -62,16 +62,9 @@
 }
 
 /* Set appearance of URL and search boxes */
-:root:-moz-lwtheme-darktext #urlbar,
-:root:-moz-lwtheme-darktext .searchbar-textbox {
+:root:-moz-lwtheme-darktext #urlbar {
 	-moz-appearance: textfield !important;
 	box-shadow: none !important;
-}
-
-:root:-moz-lwtheme-darktext  input.searchbar-textbox {
-	background-color: white !important;
-	border: 1px solid ThreeDShadow !important;
-	padding-left: 4px !important;
 }
 
 :root:-moz-lwtheme-darktext #searchbar {
@@ -122,6 +115,10 @@
 	padding-bottom: 0px !important;
 }
 
+#nav-bar {
+    border-top: 1px solid red;
+}
+
 /* Inactive tabs */
 @media (-moz-os-version: windows-win7), (-moz-os-version: windows-win8) {
     :root:-moz-lwtheme-darktext .tabbrowser-tab {
@@ -135,6 +132,18 @@
 #urlbar:not([focused="true"]):-moz-lwtheme > #urlbar-background,
 #navigator-toolbox #searchbar:not(:focus-within):-moz-lwtheme {
 	border-color: hsla(240,5%,5%,.25) !important;
+}
+
+/* Firefox 89 tabs */
+
+:root:-moz-lwtheme-darktext #nav-bar {
+    box-shadow: none;
+    border-top: 1px solid threedshadow;
+}
+
+:root:-moz-lwtheme-darktext #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
+    box-shadow: none !important;
+    border: 1px solid threedshadow !important;
 }
 
 /* If you use the search bar, you can adjust the height with this rule */
