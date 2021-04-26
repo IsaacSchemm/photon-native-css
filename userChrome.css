@@ -1,52 +1,6 @@
-/* Set CSS variables. */
-:root:-moz-lwtheme-darktext {
-	background-color: ThreeDFace !important;
-	--tabs-border: ThreeDShadow !important;
-	--toolbarbutton-icon-fill-opacity: 1.0 !important;
-	--chrome-background-color: ThreeDFace !important;
-	--chrome-secondary-background-color: ThreeDFace !important;
-	--chrome-color: ButtonText !important;
-	--backbutton-background: transparent !important;
-	--backbutton-hover-background: transparent !important;
-	--backbutton-active-background: transparent !important;
-	--backbutton-border-color: transparent !important;
-	--url-and-searchbar-background-color: Window !important;
-	--url-and-searchbar-color: WindowText !important;
-}
-
-:root:-moz-lwtheme-darktext #customization-lwtheme-menu toolbarbutton {
-	-moz-appearance: none !important;
-}
-
-/* Add a border to the toolbox (contains all the toolbars) */
-:root:-moz-lwtheme-darktext #navigator-toolbox {
-	border-bottom: 1px solid ThreeDShadow;
-}
-
-/* Make the back button look like the others */
-:root:-moz-lwtheme-darktext:not([uidensity="compact"]) #back-button {
-	padding-inline-start: 0 !important;
-	border-radius: 0 !important;
-}
-
-:root:-moz-lwtheme-darktext:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
-	box-shadow: none !important;
-	border-color: transparent !important;
-}
-
-/* Tab close button */
-:root:-moz-lwtheme-darktext toolbarbutton.close-icon:hover,
-:root:-moz-lwtheme-darktext toolbarbutton.close-icon:hover:active {
-	fill-opacity: 0.0 !important;
-}
-
 /* Menu bar */
-:root:-moz-lwtheme-darktext #main-menubar {
-	color: ButtonText;
-}
-
 :root:-moz-lwtheme-darktext #main-menubar > menu {
-	-moz-appearance: menuitem !important;
+	-moz-appearance: auto !important;
 }
 
 /* Use native rendering for toolbar buttons */
@@ -62,40 +16,15 @@
 }
 
 /* Set appearance of URL and search boxes */
-:root:-moz-lwtheme-darktext #urlbar {
-	-moz-appearance: textfield !important;
-	box-shadow: none !important;
-}
-
+:root:-moz-lwtheme-darktext #urlbar,
 :root:-moz-lwtheme-darktext #searchbar {
-	border-color: transparent !important;
-	background-color: transparent !important;
 	box-shadow: none !important;
 }
 
-:root:-moz-lwtheme-darktext .searchbar-search-button {
-	-moz-appearance: menulist;
-}
-
-:root:-moz-lwtheme-darktext .searchbar-search-icon-overlay {
-	display: none;
-}
-
-/* Dropdown arrow on the URL bar */
-:root:-moz-lwtheme-darktext .urlbar-history-dropmarker {
-	-moz-appearance: menulist-button !important;
-}
-
-/* Set color of toolbar icons */
-:root:-moz-lwtheme-darktext .toolbarbutton-animatable-box,
-:root:-moz-lwtheme-darktext .toolbarbutton-1 {
-	fill: ButtonText !important;
-}
-
-/* Sidebar header (e.g. History, Bookmarks) */
-:root:-moz-lwtheme-darktext #sidebar-header,
-:root:-moz-lwtheme-darktext #sidebar-search-container {
-	background-color: ThreeDFace;
+:root:-moz-lwtheme-darktext #urlbar:-moz-lwtheme > #urlbar-background,
+:root:-moz-lwtheme-darktext #navigator-toolbox #searchbar:-moz-lwtheme {
+	background-color: Window !important;
+	color: WindowText !important;
 }
 
 /* Hover text color on menu bar */
@@ -103,121 +32,21 @@
 	color: ButtonText !important;
 }
 
-/* Bookmarks toolbar */
-:root:-moz-lwtheme-darktext toolbarbutton.bookmark-item:not(.subviewbutton) {
-	margin: 0px 2px !important;
-	padding: 4px 2px !important;
-}
-
-:root:-moz-lwtheme-darktext #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
-	padding-left: 2px !important;
-	padding-right: 2px !important;
-	padding-bottom: 0px !important;
-}
-
-#nav-bar {
-    border-top: 1px solid red;
-}
-
-/* Inactive tabs */
-@media (-moz-os-version: windows-win7), (-moz-os-version: windows-win8) {
-    :root:-moz-lwtheme-darktext .tabbrowser-tab {
-        background-color: transparent !important;
-    }
-}
-
 /* New address bar */
-#urlbar.megabar:not([focused="true"]):-moz-lwtheme > #urlbar-background,
-#urlbar.megabar:not([focused="true"]):-moz-lwtheme:hover > #urlbar-background,
-#urlbar:not([focused="true"]):-moz-lwtheme > #urlbar-background,
-#navigator-toolbox #searchbar:not(:focus-within):-moz-lwtheme {
-	border-color: hsla(240,5%,5%,.25) !important;
+:root:-moz-lwtheme-darktext #urlbar:-moz-lwtheme > #urlbar-background,
+:root:-moz-lwtheme-darktext #navigator-toolbox #searchbar:-moz-lwtheme {
+	border: 1px solid ThreeDShadow !important;
+	box-shadow: none !important;
 }
 
 /* Firefox 89 tabs */
 
 :root:-moz-lwtheme-darktext #nav-bar {
     box-shadow: none;
-    border-top: 1px solid threedshadow;
+    border-top: 1px solid ThreeDShadow;
 }
 
 :root:-moz-lwtheme-darktext #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
     box-shadow: none !important;
-    border: 1px solid threedshadow !important;
+    border: 1px solid ThreeDShadow !important;
 }
-
-/* If you use the search bar, you can adjust the height with this rule */
-/*:root:-moz-lwtheme-darktext .searchbar-textbox {
-	height: 32px !important;
-}*/
-
-/* Enable these rules for macOS */
-/*:root:-moz-lwtheme-darktext tab toolbarbutton {
-	-moz-appearance: none !important;
-}
-:root:-moz-lwtheme-darktext .tabs-newtab-button {
-	margin-left: 3px !important;
-}
-:root:-moz-lwtheme-darktext #urlbar,
-:root:-moz-lwtheme-darktext .searchbar-textbox {
-	height: 24px !important;
-}
-:root:-moz-lwtheme-darktext #PanelUI-button {
-	border-inline-start-width: 0 !important;
-}
-:root:-moz-lwtheme-darktext #nav-bar {
-	padding-inline-start: 6px;
-	padding-inline-end: 6px;
-}
-:root:-moz-lwtheme-darktext #stop-reload-button {
-	margin-inline-start: 3px;
-	margin-inline-end: 3px;
-}
-:root:-moz-lwtheme-darktext #PanelUI-button {
-	margin-inline-start: 6px;
-}*/
-
-/* Enable these rules for GTK3 (Unix or Linux) to reduce toolbar button size */
-/*:root:-moz-lwtheme-darktext {
-	--toolbarbutton-inner-padding: 0px !important;
-}
-.tab-close-button {
-	margin-top: 3px !important;
-}*/
-
-@media (-moz-windows-classic) {
-	:root:-moz-lwtheme-darktext .tab-close-button,
-	:root:-moz-lwtheme-darktext toolbarbutton {
-		-moz-appearance: none !important;
-		border: 1px solid transparent !important;
-	}
-
-	:root:-moz-lwtheme-darktext .tab-close-button:hover,
-	:root:-moz-lwtheme-darktext toolbarbutton:hover {
-		border-top-color: ThreeDHighlight !important;
-		border-left-color: ThreeDHighlight !important;
-		border-bottom-color: ThreeDShadow !important;
-		border-right-color: ThreeDShadow !important;
-	}
-
-	:root:-moz-lwtheme-darktext .tab-close-button:hover:active,
-	:root:-moz-lwtheme-darktext toolbarbutton:hover:active,
-	:root:-moz-lwtheme-darktext #sidebar-switcher-target.active {
-		border-top-color: ThreeDShadow !important;
-		border-left-color: ThreeDShadow !important;
-		border-bottom-color: ThreeDHighlight !important;
-		border-right-color: ThreeDHighlight !important;
-	}
-
-	:root:-moz-lwtheme-darktext .urlbar-icon {
-		width: 16px !important;
-	}
-
-	:root:-moz-lwtheme-darktext #sidebar-switcher-target:hover,
-	:root:-moz-lwtheme-darktext #sidebar-switcher-target:hover:active,
-	:root:-moz-lwtheme-darktext #sidebar-switcher-target.active {
-		background: transparent !important;
-		border-radius: 0 !important;
-	}
-}
-
